@@ -10,3 +10,7 @@ the bank account, once enough confirmations were received.
 Commands
 =============
 /cryptoc show <NAME OF BANK ACCOUNT>
+
+Furhter documentation
+=====================
+https://github.com/iBa/iBank/issues/15
