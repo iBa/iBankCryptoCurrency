@@ -1,0 +1,14 @@
+#General
+name: iBankCryptoCurrency
+main: com.iBank.CryptoCurrency.iBankCryptoCurrency
+version: ${project.version}(${buildNumber})[${version.snap}]{${version.codename}}
+commands:
+     cryptoc:
+       description: Manage crypto-currency features
+       usage: /cryptoc help
+depend: [iBank]
+#Generator
+description: CryptoCurrency for iBank
+maintainer: steffengy
+authors: [steffengy]
+# Add superperms !!

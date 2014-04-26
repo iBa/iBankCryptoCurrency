@@ -1,0 +1,28 @@
+# iBank-CC Sample Configuration for SQLite
+System:
+    Debug: false
+    # If this plugin is enabled
+    Enabled: true 
+    Database:
+        # The type of the database
+        # Valid types: sqlite,mysql
+        Type: 'sqlite'
+        # Host or filename to the server
+        # Example: test.db or localhost:1234
+        Url: 'cc.db'
+        # For systems which need either dbname, dbuser or dbpassword
+        Database: 'cc'
+        User: ''
+        Password: ''
+        # The name of the tables
+        Tables: 
+            # The name of the mapping table
+            Mapping: 'mapping'
+    Coin:
+        Server: '127.0.0.1'
+        Port: 8235
+        LoginUser: 'iBank'
+        LoginPassword: 'Password'
+        Account: 'iBank'
+        ExchangeRate: 100
+        MinConfirms: 6

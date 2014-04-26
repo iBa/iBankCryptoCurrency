@@ -1,0 +1,1 @@
+CREATE TABLE {$mapping$} (address TEXT, account TEXT, amount INTEGER);

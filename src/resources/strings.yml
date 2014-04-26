@@ -1,0 +1,12 @@
+Tags:
+   CC: '&g&[&w&CryptoC&g&]'
+Commands:
+    Root: 'Shows the users CryptoCoin Address'
+    Help: 'Displays the help'
+Data:
+    Address: 'Your {{currency}}-address: '
+Error:
+    no_account: 'Sorry, that account does not exist!'
+    internal: 'An internal error occured!'
+    no_player: 'Sorry, you need to be a player to execute this!'
+    wrong_arguments: 'Wrong arguments given!'
