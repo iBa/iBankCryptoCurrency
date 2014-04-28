@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <style type="text/css">
+        body {font-family: arial; text-align: center}
+    </style>
+    <title>CryptoCoin Copy/Paste Helper</title>
+    <script type="text/javascript">
+        $(document).ready(function() { 
+            var query = window.location.search.substring(1).replace(/\W/g, '');
+            if(query != "") {
+                window.prompt("To copy the selected address: press Ctrl/C, Enter", query);
+                $("#address").text("Your address: " + query);
+            }
+        });
+    </script>
+    </head>
+        <body>
+            <h1 id="address"></h1>
+        </body>
+</html>
