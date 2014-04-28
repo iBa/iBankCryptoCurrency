@@ -72,7 +72,7 @@ public class iBankCryptoCurrency extends JavaPlugin
 		
 	    //register commands
 		CommandHandler.register(new RootCommand());
-		CommandHandler.register(new CommandHelp("cryptoc"));
+		CommandHandler.register(new CommandHelp("ccaddr"));
 	    //register loan help
 		description = this.getDescription();  
 		  

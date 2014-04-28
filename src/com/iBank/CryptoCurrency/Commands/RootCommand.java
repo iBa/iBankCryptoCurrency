@@ -16,7 +16,7 @@ import com.iBank.system.CommandInfo;
  * 
  * @author steffengy Can't be run from console
  */
-@CommandInfo(arguments = { "Account" }, permission = "cryptoc.access", root = "cryptoc", sub = "show")
+@CommandInfo(arguments = { "Account" }, permission = "cryptoc.access", root = "ccaddr", sub = "show")
 public class RootCommand extends Command {
 
 	/**

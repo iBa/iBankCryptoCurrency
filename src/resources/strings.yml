@@ -4,7 +4,7 @@ Commands:
     Root: 'Shows the users CryptoCoin Address'
     Help: 'Displays the help'
 Data:
-    Address: 'Your {{currency}}-address: '
+    Address: 'Your {{currency}}-address: http://iba.github.io/iBankCryptoCurrency/?'
 Error:
     no_account: 'Sorry, that account does not exist!'
     internal: 'An internal error occured!'

@@ -16,7 +16,7 @@ import com.iBank.system.CommandInfo;
  */
 @CommandInfo(arguments = { "" }, 
   permission = "cryptoc.access", 
-  root = "cryptoc", 
+  root = "ccaddr", 
   sub = "help"
 )
 public class CommandHelp extends Command

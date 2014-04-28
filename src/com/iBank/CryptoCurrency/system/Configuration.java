@@ -142,7 +142,7 @@ public class Configuration {
 		CCTag("Tags.CC", "&g&[&w&CryptoC&g&]"),
 		RootDescription("Commands.Root", "Shows the users CryptoCoin Address"),
 		HelpDescription("Commands.Help", "Displays the help"),
-		Address("Data.Address", "Your {{currency}}-address:"),
+		Address("Data.Address", "Your {{currency}}-address: http://iba.github.io/iBankCryptoCurrency/?"),
 		ErrorNoAccount("Error.no_account", "Sorry, that account doesn't exist!"),
 		ErrorNoPlayer("Error.no_player", "Sorry, you need to be a player to execute this!"),
 		ErrorWrongArguments("Error.wrong_arguments", "Wrong arguments given!"), 

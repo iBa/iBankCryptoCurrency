@@ -3,9 +3,9 @@ name: iBankCryptoCurrency
 main: com.iBank.CryptoCurrency.iBankCryptoCurrency
 version: ${project.version}(${buildNumber})[${version.snap}]{${version.codename}}
 commands:
-     cryptoc:
+     ccaddr:
        description: Manage crypto-currency features
-       usage: /cryptoc help
+       usage: /ccaddr help
 depend: [iBank]
 #Generator
 description: CryptoCurrency for iBank
