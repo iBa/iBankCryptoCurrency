@@ -1,5 +1,6 @@
 package com.iBank.CryptoCurrency.system;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,10 +14,10 @@ public class DBModel
 	public static class PaymentInformation
 	{
 		public String address;
-		public double amount;
+		public BigDecimal amount;
 		public String bankAcc;
 		
-		public PaymentInformation(String address, String account, double am) {
+		public PaymentInformation(String address, String account, BigDecimal am) {
 			this.address = address;
 			bankAcc = account;
 			amount = am;
@@ -39,7 +40,7 @@ public class DBModel
 		List<PaymentInformation> ret = new ArrayList<PaymentInformation>();
 		do
 		{
-			ret.add(new PaymentInformation(data.getString("address"), data.getString("account"), data.getDouble("amount")));
+			ret.add(new PaymentInformation(data.getString("address"), data.getString("account"), data.getBigInteger("amount")));
 		} while(data.nextEntry());
 		return ret.toArray(new PaymentInformation[0]);
 	}
@@ -49,7 +50,7 @@ public class DBModel
 	{
 		QueryResult data = DataSource.query(new String[]{"amount", "account"}, Configuration.Entry.DatabaseMappingTable.getValue(), new AndCondition("address", address, Condition.Operators.IDENTICAL));
 		if(!data.found) return null;
-		return new PaymentInformation(address, data.getString("account"), data.getDouble("amount"));
+		return new PaymentInformation(address, data.getString("account"), data.getBigInteger("amount"));
 	}
 	
 	/* address by bank account */

@@ -25,11 +25,13 @@ public class Syncer extends TimerTask {
 			}
 			if(Configuration.Entry.Debug.getBoolean()) System.out.println("[iBank-CC] DBG: " + 
 					pm.amount + "!=" + amount + " / " + pm.bankAcc);
-			if(amount == pm.amount) continue;
+			BigDecimal tmpAm = new BigDecimal(amount);
+			if(tmpAm.compareTo(pm.amount) == 0) continue;
 			BankAccount bankAcc = Bank.getAccount(pm.bankAcc);
+			
 			if(bankAcc == null) { System.out.println("[iBank-CC] This is not good! Invalid bank account: " + pm.bankAcc + " " + pm.address); continue; }
-			bankAcc.addBalance(new BigDecimal(amount).subtract(new BigDecimal(pm.amount)).multiply(new BigDecimal(Configuration.Entry.CoinExchangeRate.getDouble())));
-			pm.amount = amount;
+			bankAcc.addBalance(new BigDecimal(amount).subtract(pm.amount).multiply(new BigDecimal(Configuration.Entry.CoinExchangeRate.getDouble())));
+			pm.amount = tmpAm;
 			DBModel.setPaymentInformation(pm);
 		}
 	}

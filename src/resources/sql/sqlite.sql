@@ -1,1 +1,1 @@
-CREATE TABLE {$mapping$} (address TEXT, account TEXT, amount INTEGER);
+CREATE TABLE {$mapping$} (address TEXT, account TEXT, amount TEXT);

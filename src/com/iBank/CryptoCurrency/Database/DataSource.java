@@ -101,7 +101,7 @@ public class DataSource
 	 */
 	private static void updateStructure() 
 	{
-		
+
 	}
 
 	/**
