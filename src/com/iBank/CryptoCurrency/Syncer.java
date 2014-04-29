@@ -23,6 +23,8 @@ public class Syncer extends TimerTask {
 			} catch (BitcoinException e) {
 				e.printStackTrace();
 			}
+			if(Configuration.Entry.Debug.getBoolean()) System.out.println("[iBank-CC] DBG: " + 
+					pm.amount + "!=" + amount + " / " + pm.bankAcc);
 			if(amount == pm.amount) return;
 			BankAccount bankAcc = Bank.getAccount(pm.bankAcc);
 			if(bankAcc == null) { System.out.println("[iBank-CC] This is not good! Invalid bank account: " + pm.bankAcc + " " + pm.address); continue; }
